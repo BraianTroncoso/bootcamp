@@ -8,5 +8,5 @@ import { Component } from '@angular/core'; // Tenemos el angular core que es de 
 })
 export class AppComponent {
   title = 'HolaMundo'; // Variable que se esta exportando a la vista.
-  nombre = 'Braian';
+  usuario = '@braiangmail';
 }

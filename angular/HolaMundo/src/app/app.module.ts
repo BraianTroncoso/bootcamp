@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core'; //Se trata de un modulo de angular, basicamente es un decorador con metadatos
 import { BrowserModule } from '@angular/platform-browser'; //Se renderiza se especifica para cargar la app(o modulo) en el navegador
 
-import { AppComponent } from './app.component'; // Importamos nuestro componente principal, en este caso.
+import { AppComponent } from './app.component';
+import { SaludoComponent } from './components/saludo/saludo.component'; // Importamos nuestro componente principal, en este caso.
+import { FormsModule } from '@angular/forms';
 
 @NgModule({ // Estamos declarando el modulo como se tiene que ejecutar a travez del decorador creado, estos serian sus metadatos.
   declarations: [ //Le indicamos que va a tener un AppComponent y que va ser renderizable en nuestra app.
-    AppComponent
+    AppComponent, SaludoComponent
   ],
   imports: [
-    BrowserModule //Importamos el modulo para poder renderizar el navejador y ver la app funcionando.
+    BrowserModule,
+    FormsModule //Importamos el modulo para poder renderizar el navegador y ver la app funcionando.
   ],
   providers: [],
   bootstrap: [AppComponent] //Indicamos cual es el componente que inicia nuestro modulo
