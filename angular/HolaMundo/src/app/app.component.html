@@ -325,7 +325,10 @@
  
   <input type="text" placeholder="Nombre del usuario" [(ngModel)]="usuario">  
   <!--Valor pasando de App component(Componente padre inyecta)-->
-  <app-saludo [nombre]="usuario"></app-saludo>
+  <app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
+
+  <app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
+
 
   <!--Valor tomado literal
   <app-saludo nombre="pepe"></app-saludo> 

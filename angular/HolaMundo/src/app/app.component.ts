@@ -9,4 +9,11 @@ import { Component } from '@angular/core'; // Tenemos el angular core que es de 
 export class AppComponent {
   title = 'HolaMundo'; // Variable que se esta exportando a la vista.
   usuario = '@braiangmail';
+  
+  /*
+  Esta fúncion se ejecuta cuando en el hijo saludoComponent se pulse un boton
+  */
+  recibirMensajeDelHijo(evento: string){
+    alert(evento);
+  }
 }
