@@ -1,0 +1,12 @@
+<h1>Hola, {{ nombre }}!</h1>
+
+<h3 [innerText]="nombre" class="saludo">
+  <!-- Añade aquí el nombre -->
+</h3>
+
+<button id="emit-alerta" {click}="enviarMensajeAlPadre()"></button>
+
+<!-- Hace uso del componete ListaBasica del módulo Listas -->
+
+<!-- Por alguna razón no se estaria importando el componente - ver despues - -->
+<!--<app-lista-basica></app-lista-basica>-->
