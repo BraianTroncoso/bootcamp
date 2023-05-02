@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser'; //Se renderiza se esp
 import { AppComponent } from './app.component';
 import { SaludoComponent } from './components/saludo/saludo.component'; // Importamos nuestro componente principal, en este caso.
 import { FormsModule } from '@angular/forms';
+import { ListsModule } from './modules/lists/lists.module';
 
 @NgModule({ // Estamos declarando el modulo como se tiene que ejecutar a travez del decorador creado, estos serian sus metadatos.
   declarations: [ //Le indicamos que va a tener un AppComponent y que va ser renderizable en nuestra app.
@@ -11,7 +12,10 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule //Importamos el modulo para poder renderizar el navegador y ver la app funcionando.
+    FormsModule,
+    // Este es un modulo personalizado que exporta componentes de tipos listas
+    ListsModule
+     //Importamos el modulo para poder renderizar el navegador y ver la app funcionando.
   ],
   providers: [],
   bootstrap: [AppComponent] //Indicamos cual es el componente que inicia nuestro modulo
