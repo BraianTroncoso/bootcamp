@@ -4,12 +4,15 @@
     <!--No indicamos nada en las etiquetas, sino el valor viene definido por la propiedad {{nombre}}-->
 </h3>
 
-<p [ngClass]="{color: 'Orange'}">
+<p [ngStyle]="{color: 'orange'}">
     Hola, ¿que tal?
 </p>
-<p [ngClass]="myStyle">
+<!-- <p [ngClass]="{color: 'orange'}">
     Hola, ¿que tal?
-</p>
+</p> -->
+<!-- <p [ngClass]="myStyle">
+    Hola, ¿que tal?
+</p> -->
 <button id="emit-alerta" (click)="enviarMensajeAlPadre()">Enviar Mensaje de saludo al componente padre</button>
 
 <!-- Hacer uso del componente ListaBascia del módulo Listas -->
