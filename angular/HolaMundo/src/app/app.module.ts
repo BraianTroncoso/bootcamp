@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { SaludoComponent } from './components/saludo/saludo.component'; // Importamos nuestro componente principal, en este caso.
 import { FormsModule } from '@angular/forms';
 import { ListsModule } from './modules/lists/lists.module';
+import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
 
 @NgModule({ // Estamos declarando el modulo como se tiene que ejecutar a travez del decorador creado, estos serian sus metadatos.
   declarations: [ //Le indicamos que va a tener un AppComponent y que va ser renderizable en nuestra app.
-    AppComponent, SaludoComponent
+    AppComponent, SaludoComponent, ListaContactosComponent
   ],
   imports: [
     BrowserModule,

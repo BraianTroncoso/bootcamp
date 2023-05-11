@@ -315,25 +315,27 @@
    
 
 <div class="content" role="main">
-  <!-- <h1>¡Hola, {{ nombre }}!</h1> -->
-  <!-- Input para trabajar con NgModels --> <!-- Bindear, es pasar info de un controlador a vista-->
-  <!-- ctrl+space para ver a que autocompletado puedo acceder-->
-  <!--ngModel es atributo y evento al mismo tiempo, podemos settear la variable desde el controlador,
+  <!-- <h1>¡Hola, {{ nombre }}!</h1> 
+  Input para trabajar con NgModels Bindear, es pasar info de un controlador a vista
+  ctrl+space para ver a que autocompletado puedo acceder
+  ngModel es atributo y evento al mismo tiempo, podemos settear la variable desde el controlador,
   como tambien desde la vista, esto nos permite modificar de ambos "modelos" cambiando el valor de la variable
   Enviamos informacion y escuchamos informacion para actualizar la variable en cuestion(en este caso usuario)
--->
+
  
   <input type="text" placeholder="Nombre del usuario" [(ngModel)]="usuario">  
-  <!--Valor pasando de App component(Componente padre inyecta)-->
+  Valor pasando de App component(Componente padre inyecta)
   <app-saludo [nombre]="usuario" (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
 
-  <!-- <app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo> -->
+  <app-saludo (mensajeEmitter)="recibirMensajeDelHijo($event)"></app-saludo>
 
 
-  <!--Valor tomado literal
+  Valor tomado literal
   <app-saludo nombre="pepe"></app-saludo> 
   
   Valor adquirido por default(Busca el valor definido en el componente)
-  <app-saludo ></app-saludo>
+  <app-saludo ></app-saludo> 
 -->
+<!-- Ejemplo de uso-->
+<app-lista-contactos></app-lista-contactos>
 </div>

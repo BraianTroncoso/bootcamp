@@ -1,0 +1,4 @@
+<h1>Lista de contactos</h1>
+<div *ngFor="let contactos of listaContactos">
+        <p class="contacto" (click)="obtenerContacto(contactos.id);">{{contactos.nombre}}</p>
+</div>
