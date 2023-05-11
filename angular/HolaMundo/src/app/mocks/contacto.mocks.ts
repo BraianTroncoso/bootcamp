@@ -4,21 +4,21 @@ import { Icontacto } from "../models/contacto.interface";
 
 export const CONTACTOS : Icontacto [] = [
     {
-        id:1,
+        id:0,
         nombre: 'Martin',
         apellidos: 'San Jose',
         email: 'sanjosem@mail.com',
         edad: 30
     },
     {
-        id:2,
+        id:1,
         nombre: 'Juan',
         apellidos: 'Garcia Lopez',
         email: 'garcialopezj@mail.com',
         edad: 35
     },
     {
-        id:3,
+        id:2,
         nombre: 'Natalia',
         apellidos: 'Gimenez',
         email: 'gimenezn@mail.com',

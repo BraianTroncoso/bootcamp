@@ -11,16 +11,17 @@ export class ContactoService {
 
   constructor() { }
 
-  obtenerContactos(): Icontacto[] {
-    return CONTACTOS; // Nos devuelve un listado de contactos
+  obtenerContactos(): Promise<Icontacto[]>{
+    return Promise.resolve(CONTACTOS); // Nos devuelve un listado de contactos
   }
 
+
   // Buscamos el contacto por ID dentro de la lista CONTACTOS mockeados
-  obtenerContactosPorID(id: number): Icontacto | undefined{
+  obtenerContactosPorID(id: number): Promise<Icontacto>| undefined{
     const contacto = CONTACTOS.find((contacto : Icontacto) => contacto.id === id);
 
     if(contacto){
-      return contacto;
+      return Promise.resolve(contacto);
     }else{
       return;
     }

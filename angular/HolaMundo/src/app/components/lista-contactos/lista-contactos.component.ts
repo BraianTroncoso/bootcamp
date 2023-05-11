@@ -10,6 +10,7 @@ import { ContactoService } from 'src/app/services/contacto.service';
 export class ListaContactosComponent implements OnInit {
 // Creamos una lista de contactos
   listaContactos : Icontacto [] = [];
+  contactoSeleccionado : Icontacto | undefined;
 
   // Inyectamos en el constructor el servicio de contactos
   constructor(private contactoService : ContactoService){
@@ -17,10 +18,17 @@ export class ListaContactosComponent implements OnInit {
 
   ngOnInit(): void {
     // Obtener la lista de contactos que nos brinda el servicio
-    this.listaContactos = this.contactoService.obtenerContactos();
-    console.table(this.listaContactos); 
+   this.contactoService.obtenerContactos()
+   .then((lista:Icontacto[]) => this.listaContactos = lista)
+   .catch((error) => console.error(`Ha habido un error al recuperar la lista de contactos${error}`))
+   .finally(() => console.log('Peticion del contacto por id terminada'));
+  
   }
   obtenerContacto(id: number){
-    alert(`Obtenemos informacion del contacto: ${id}`)
+   this.contactoService.obtenerContactosPorID(id)
+   ?.then((contacto : Icontacto) => this.contactoSeleccionado = contacto)
+   .catch((error) => console.error(`Ha habido un error al recuperar el contacto${error}`))
+   .finally(() => console.log('Peticion del contacto por id terminada'));
   }
+
 }

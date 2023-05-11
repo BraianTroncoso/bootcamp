@@ -2,3 +2,17 @@
 <div *ngFor="let contactos of listaContactos">
         <p class="contacto" (click)="obtenerContacto(contactos.id);">{{contactos.nombre}}</p>
 </div>
+<ng-container *ngIf="contactoSeleccionado;else noContactoSeleccionado">
+        <div>
+                <h5>Datos del contacto: </h5>
+                <h6>{{contactoSeleccionado.nombre}}</h6>
+                <h6>{{contactoSeleccionado.apellidos}}</h6>
+                <h6>{{contactoSeleccionado.edad}}</h6>
+                <h6>{{contactoSeleccionado.email}}</h6>
+        </div>
+</ng-container>
+<ng-template #noContactoSeleccionado>
+<div>
+        <h6>No has seleccionado ningun contacto</h6>
+</div>
+</ng-template>
