@@ -26,7 +26,7 @@ subscription: Subscription | undefined;
    this.contactoService.obtenerContactos()
    .then((lista:Icontacto[]) => this.listaContactos = lista)
    .catch((error) => console.error(`Ha habido un error al recuperar la lista de contactos${error}`))
-   .finally(() => console.log('Peticion del contacto por id terminada'));
+   .finally(() => console.log('Peticion del contacto por id terminada completamente'));
   
   }
   obtenerContacto(id: number){
